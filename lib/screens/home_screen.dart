@@ -46,6 +46,10 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  _findTaskByTitle(String title) {
+    return (_userTasks.where((task) => task.title == title)).isNotEmpty;
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -111,6 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 isScrollControlled: true,
                 builder: (context) => AddTaskModal(
                       updateTasksListView: _addTasksListView,
+                      findTaskByTitle: _findTaskByTitle,
                     ));
           },
         ),

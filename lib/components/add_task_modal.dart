@@ -6,10 +6,14 @@ import 'package:tasksm_app/repositories/task_repository.dart';
 
 class AddTaskModal extends StatefulWidget {
   final Function(Task task) _updateTasksListView;
+  final Function(String title) _findTaskByTitle;
 
   const AddTaskModal(
-      {super.key, required Function(Task task) updateTasksListView})
-      : _updateTasksListView = updateTasksListView;
+      {super.key,
+      required Function(Task task) updateTasksListView,
+      required Function(String title) findTaskByTitle})
+      : _updateTasksListView = updateTasksListView,
+        _findTaskByTitle = findTaskByTitle;
 
   @override
   State<AddTaskModal> createState() => _AddTaskModalState();
@@ -61,6 +65,14 @@ class _AddTaskModalState extends State<AddTaskModal> {
 
                 if (value.length < 3) {
                   return 'É necesário por o menos 3 letras';
+                }
+
+                if (value.length > 50) {
+                  return 'A tarefa não pode ser maior que 50 letras';
+                }
+
+                if (widget._findTaskByTitle(value)) {
+                  return 'Já possui uma tarefa com esse título';
                 }
 
                 return null;
