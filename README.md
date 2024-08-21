@@ -1,16 +1,17 @@
 # tasksm_app
 
-Task manager app
+# This project is a simple manage task app
 
-## Getting Started
+## Images
 
-This project is a starting point for a Flutter application.
+<div style="display: flex; align-items: center;">
+  <img style="max-width: 100%;" src="https://github.com/user-attachments/assets/58a97a1d-eb44-4c4e-a57f-05fec09f4da2" alt="" />
+  <img style="max-width: 100%;" src="https://github.com/user-attachments/assets/6f8dab48-724c-470a-8043-ea629f2fac94" alt="" />
+  <img style="max-width: 100%;" src="https://github.com/user-attachments/assets/066291bf-8174-46ab-a528-4e02dd038fe5" alt="" />
+</div>
 
-A few resources to get you started if this is your first Flutter project:
+## Running project
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter run
+```
