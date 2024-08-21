@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class Loading extends StatelessWidget {
   const Loading({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: CircularProgressIndicator.adaptive());
+    return Center(
+        child: LoadingAnimationWidget.waveDots(size: 100, color: Colors.grey));
   }
 }
