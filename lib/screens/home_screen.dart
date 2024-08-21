@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                   child: ListView.separated(
                       padding: const EdgeInsets.only(
-                          left: 20, right: 20, top: 10, bottom: 80),
+                          left: 20, right: 20, bottom: 80),
                       itemCount: _userTasks.length,
                       itemBuilder: (context, index) {
                         return TaskItem(
@@ -112,7 +112,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(100),
                     ),
-                    child: const Icon(Icons.add, color: Colors.white, size: 40),
+                    child: const Icon(Icons.note_add,
+                        color: Colors.white, size: 40),
                     onPressed: () {
                       showModalBottomSheet(
                           context: context,

@@ -43,7 +43,7 @@ class _AddTaskModalState extends State<AddTaskModal> {
             Text("Adicionar Tarefa",
                 style: GoogleFonts.roboto(
                     fontSize: 24, fontWeight: FontWeight.w900)),
-            const SizedBox(height: 80),
+            const SizedBox(height: 60),
             TextFormField(
               autocorrect: false,
               decoration: InputDecoration(
@@ -81,7 +81,7 @@ class _AddTaskModalState extends State<AddTaskModal> {
                 _textForm = text;
               },
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 60),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
