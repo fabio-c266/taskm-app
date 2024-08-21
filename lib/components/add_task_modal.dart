@@ -35,7 +35,7 @@ class _AddTaskModalState extends State<AddTaskModal> {
       padding:
           EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.48,
+        height: MediaQuery.of(context).size.height * 0.5,
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
         child: Form(
           key: _formKey,
