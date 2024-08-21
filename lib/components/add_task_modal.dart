@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tasksm_app/components/button.dart';
+import 'package:tasksm_app/enums/button_types.dart';
 import 'package:tasksm_app/models/task.dart';
 import 'package:tasksm_app/repositories/task_repository.dart';
 
@@ -87,13 +88,13 @@ class _AddTaskModalState extends State<AddTaskModal> {
               children: [
                 Button(
                     text: "Cancelar",
-                    type: ButtonType.danger,
+                    type: ButtonTypes.danger,
                     onPressed: () {
                       Navigator.pop(context);
                     }),
                 Button(
                     text: "Adicionar",
-                    type: ButtonType.primary,
+                    type: ButtonTypes.primary,
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         _createTask();

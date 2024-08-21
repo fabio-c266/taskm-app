@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tasksm_app/enums/button_types.dart';
 import 'package:tasksm_app/utils/custom_colors.dart';
-
-enum ButtonType { primary, danger }
 
 class Button extends StatelessWidget {
   final String _text;
-  final ButtonType? _type;
+  final ButtonTypes? _type;
   final void Function() _onPressed;
 
   const Button(
       {required String text,
-      ButtonType? type,
+      ButtonTypes? type,
       required void Function() onPressed,
       super.key})
       : _text = text,
@@ -20,9 +19,9 @@ class Button extends StatelessWidget {
 
   Color getButtonColor() {
     switch (_type) {
-      case ButtonType.primary:
+      case ButtonTypes.primary:
         return CustomColors.blueBaseButton;
-      case ButtonType.danger:
+      case ButtonTypes.danger:
         return CustomColors.redBaseButton;
       default:
         return CustomColors.blueBaseButton;

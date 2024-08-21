@@ -1,0 +1,1 @@
+enum ButtonTypes { primary, danger }

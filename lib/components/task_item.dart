@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tasksm_app/components/button.dart';
+import 'package:tasksm_app/enums/button_types.dart';
 import 'package:tasksm_app/models/task.dart';
 import 'package:tasksm_app/repositories/task_repository.dart';
 import 'package:tasksm_app/utils/custom_colors.dart';
@@ -98,7 +99,7 @@ class _TaskItemState extends State<TaskItem> {
                               Expanded(
                                   child: Button(
                                       text: 'Sim',
-                                      type: ButtonType.danger,
+                                      type: ButtonTypes.danger,
                                       onPressed: () async {
                                         await taskRepository
                                             .delete(widget._task);
@@ -111,7 +112,7 @@ class _TaskItemState extends State<TaskItem> {
                               Expanded(
                                   child: Button(
                                       text: 'Não',
-                                      type: ButtonType.primary,
+                                      type: ButtonTypes.primary,
                                       onPressed: () {
                                         Navigator.pop(context);
                                       }))
